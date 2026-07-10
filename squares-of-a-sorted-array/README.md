@@ -33,6 +33,6 @@ After sorting, it becomes [0,1,9,16,100].
 <strong>Follow up:</strong> Squaring each element and sorting the new array is very trivial, could you find an <code>O(n)</code> solution using a different approach?
 <hr>
 <h3>Solution</h3>
-<p><strong>Language:</strong> java</p>
-<p><strong>Runtime:</strong> 1 ms (Beats 100.00%)</p>
-<p><strong>Memory:</strong> 47 MB (Beats 87.11%)</p>
+<p><strong>Language:</strong> cpp</p>
+<p><strong>Runtime:</strong> 0 ms (Beats 100.00%)</p>
+<p><strong>Memory:</strong> 30.2 MB (Beats 67.56%)</p>
