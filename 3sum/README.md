@@ -46,5 +46,5 @@ Notice that the order of the output and the order of the triplets does not matte
 <hr>
 <h3>Solution</h3>
 <p><strong>Language:</strong> cpp</p>
-<p><strong>Runtime:</strong> 43 ms (Beats 84.34%)</p>
-<p><strong>Memory:</strong> 28.9 MB (Beats 92.78%)</p>
+<p><strong>Runtime:</strong> 42 ms (Beats 86.87%)</p>
+<p><strong>Memory:</strong> 28.7 MB (Beats 99.84%)</p>
