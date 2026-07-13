@@ -45,6 +45,6 @@ Notice that the order of the output and the order of the triplets does not matte
 
 <hr>
 <h3>Solution</h3>
-<p><strong>Language:</strong> java</p>
-<p><strong>Runtime:</strong> 31 ms (Beats 83.39%)</p>
-<p><strong>Memory:</strong> 59 MB (Beats 85.52%)</p>
+<p><strong>Language:</strong> cpp</p>
+<p><strong>Runtime:</strong> 47 ms (Beats 65.26%)</p>
+<p><strong>Memory:</strong> 29.1 MB (Beats 47.61%)</p>
