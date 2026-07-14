@@ -36,6 +36,6 @@
 
 <hr>
 <h3>Solution</h3>
-<p><strong>Language:</strong> java</p>
+<p><strong>Language:</strong> cpp</p>
 <p><strong>Runtime:</strong> 0 ms (Beats 100.00%)</p>
-<p><strong>Memory:</strong> 43.7 MB (Beats 10.79%)</p>
+<p><strong>Memory:</strong> 11.6 MB (Beats 79.00%)</p>
