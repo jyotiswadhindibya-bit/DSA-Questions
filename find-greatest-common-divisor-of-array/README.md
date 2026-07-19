@@ -49,6 +49,6 @@ The greatest common divisor of 3 and 3 is 3.
 
 <hr>
 <h3>Solution</h3>
-<p><strong>Language:</strong> cpp</p>
+<p><strong>Language:</strong> java</p>
 <p><strong>Runtime:</strong> 0 ms (Beats 100.00%)</p>
-<p><strong>Memory:</strong> 16.3 MB (Beats 31.47%)</p>
+<p><strong>Memory:</strong> 45.1 MB (Beats 41.46%)</p>
