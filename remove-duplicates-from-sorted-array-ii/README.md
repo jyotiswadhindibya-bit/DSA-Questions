@@ -57,6 +57,6 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 <hr>
 <h3>Solution</h3>
-<p><strong>Language:</strong> cpp</p>
-<p><strong>Runtime:</strong> 7 ms (Beats 72.94%)</p>
-<p><strong>Memory:</strong> 19.7 MB (Beats 24.46%)</p>
+<p><strong>Language:</strong> java</p>
+<p><strong>Runtime:</strong> 0 ms (Beats 100.00%)</p>
+<p><strong>Memory:</strong> 48.7 MB (Beats 69.90%)</p>
