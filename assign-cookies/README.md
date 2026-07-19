@@ -40,6 +40,6 @@ You need to output 2.
 
 <hr>
 <h3>Solution</h3>
-<p><strong>Language:</strong> cpp</p>
-<p><strong>Runtime:</strong> 11 ms (Beats 39.52%)</p>
-<p><strong>Memory:</strong> 44.7 MB (Beats 78.62%)</p>
+<p><strong>Language:</strong> java</p>
+<p><strong>Runtime:</strong> 14 ms (Beats 92.24%)</p>
+<p><strong>Memory:</strong> 51.5 MB (Beats 37.32%)</p>
