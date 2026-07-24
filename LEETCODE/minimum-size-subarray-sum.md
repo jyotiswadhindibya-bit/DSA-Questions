@@ -70,6 +70,25 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int minSubArrayLen(int target, vector<int>& nums) {
+        int n=nums.size(),l=0,s=0,res=n+1;
+        for(int r=0;r<n;r++){
+            s+=nums[r];
+            while(s>=target){
+                res=min(res,r-l+1);
+                s-=nums[l++];
+            }
+        }
+        return res==n+1?0:res;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
