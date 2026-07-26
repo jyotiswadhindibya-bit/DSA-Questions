@@ -97,6 +97,27 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int maxProduct(int n) {
+        int l=-1,s=-1;
+        while(n>0){
+            int d=n%10;
+            if(d>l) {
+            s=l;
+            l=d;
+        }
+           else if(d>s && d<=l) s=d;
+            n/=10;
+        }
+        return l*s;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
