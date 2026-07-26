@@ -84,6 +84,29 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int totalFruit(vector<int>& fruits) {
+      int n=fruits.size();
+        vector<int> f(n);
+        int c=0,res=-1;
+        for(int l=0,r=0;r<n;r++){
+            if(f[fruits[r]]==0) c++;
+            f[fruits[r]]++;
+            while(c>2){
+                f[fruits[l]]--;
+                if(f[fruits[l++]]==0) c--;
+            }
+            res=max(res,r-l+1);
+        }
+        return res;  
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
