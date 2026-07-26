@@ -69,6 +69,23 @@ public:
 };
 ```
 
+
+#### Java
+
+```java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int n=s.length(),l=0,res=0;
+        Set<Character> set=new HashSet<>();
+        for(int r=0;r<n;r++){
+            while(set.contains(s.charAt(r))) set.remove(s.charAt(l++));
+            set.add(s.charAt(r));
+            res=Math.max(res,r-l+1);
+        }
+        return res;
+    }
+}
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
