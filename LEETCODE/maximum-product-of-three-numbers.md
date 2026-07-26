@@ -42,12 +42,25 @@
 class Solution {
 public:
     int maximumProduct(vector<int>& nums) {
-        int n=nums.size();
-        sort(nums.begin(),nums.end());
-        int p1=0,p2=0;
-        p1=nums[n-1]*nums[n-2]*nums[n-3];
-        if(nums[0]<0 && nums[1]<0) p2=nums[n-1]*nums[0]*nums[1];
-        return max(p1,p2);
+        int l=-1001,s=-1001,t=-1001,n1=0,n2=0;
+        for(const auto& d:nums){
+            if(d>l) {
+            t=s;
+            s=l;
+            l=d;
+            }
+           else if(d>s && d<=l){
+            t=s;
+            s=d;
+           }
+           else if(d>t && d<=s) t=d;
+            if(d<n1){
+                n2=n1;
+                n1=d;
+            }
+            else if(d<n2 && d>=n1) n2=d;
+        }
+        return max(n1*n2*l,l*s*t);
     }
 };
 ```
