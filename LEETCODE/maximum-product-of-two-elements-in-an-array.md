@@ -66,6 +66,25 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+         int l=-1,s=-1,n=nums.size();
+        for(int i=0;i<n;i++){
+            if(nums[i]>l){
+            s=l;
+            l=nums[i];
+        }
+           else if(nums[i]>s && nums[i]<=l) s=nums[i];
+        }
+        return --l*--s;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
