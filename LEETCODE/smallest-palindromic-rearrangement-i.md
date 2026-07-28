@@ -88,6 +88,31 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    string smallestPalindrome(string s) {
+        int n=s.length();
+        if(n==1) return s;
+        int f[26]={0};
+        string r="";
+        char c=0;
+        for(int i=0;i<n;i++) f[s[i]-97]++;
+        for(int i=0;i<26;i++){
+            if(f[i]%2==1) c=(char)(i+97);
+            for(int j=0;j<f[i]/2;j++) r+=(char)(i+97);
+        }
+        string r1=r;
+        if(c!=0) r+=c;
+        reverse(r1.begin(),r1.end());
+        r+=r1;
+        return r;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
