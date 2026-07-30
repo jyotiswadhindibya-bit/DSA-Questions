@@ -76,15 +76,12 @@ It can be shown that no other mapping can provide a lower cost.
 class Solution {
 public:
     int minimumPushes(string word) {
-        int n=word.size();
-        if(n<=8) return n;
-        else if(n<=16) return (n-8)*2+8;
-        else if(n<=24) return (n-16)*3+24;
-        else return (n-24)*4+48;
+        int d = word.size() / 8;
+        int m = word.size() % 8;
+        return 4 * d * (d + 1) + m * (d + 1);
     }
 };
 ```
-
 
 #### Java
 
