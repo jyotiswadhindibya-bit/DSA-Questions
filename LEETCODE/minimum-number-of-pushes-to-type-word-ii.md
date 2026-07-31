@@ -99,6 +99,24 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int minimumPushes(string word) {
+          int f[26]={0};
+        int n=word.length();
+        for(int i=0;i<n;i++) f[word[i]-97]++;
+        sort(f,f+26);
+     
+        int res=0;
+        for(int i=25;i>=0 && f[i]>0;i--) res+=f[i]*((25-i)/8+1);
+        return res;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
