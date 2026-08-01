@@ -55,7 +55,7 @@ class Solution {
                 arr[r--]=1;
             }
             else if(arr[l]==1) r=r-1;
-            else l++;
+            else l=l+1;
         }
     }
 }
