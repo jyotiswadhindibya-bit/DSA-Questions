@@ -26,8 +26,9 @@ https://www.geeksforgeeks.org
 #### C++
 
 ```cpp
-https://www.geeksforgeeks.org
+/* Could not extract code from GFG editor */
 ```
+
 <!-- tabs:end -->
 
 <!-- solution:end -->
