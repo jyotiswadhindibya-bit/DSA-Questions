@@ -26,7 +26,7 @@ https://www.geeksforgeeks.org
 #### C++
 
 ```cpp
-https://www.geeksforgeeks.org
+/* Code hidden */
 ```
 
 <!-- tabs:end -->
