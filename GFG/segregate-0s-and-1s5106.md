@@ -42,6 +42,24 @@ class Solution {
 };
 ```
 
+
+#### Java
+
+```java
+class Solution {
+    void segregate0and1(int[] arr) {
+        int n=arr.length,r=n-1,l=0;
+        while(l<r){
+            if(arr[l]==1 && arr[r]==0){
+                arr[l++]=0;
+                arr[r--]=1;
+            }
+            else if(arr[l]==1) r--;
+            else l++;
+        }
+    }
+}
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
