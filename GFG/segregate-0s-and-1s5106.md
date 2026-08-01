@@ -54,12 +54,13 @@ class Solution {
                 arr[l++]=0;
                 arr[r--]=1;
             }
-            else if(arr[l]==1) r--;
+            else if(arr[l]==1) r=r-1;
             else l++;
         }
     }
 }
 ```
+
 <!-- tabs:end -->
 
 <!-- solution:end -->
