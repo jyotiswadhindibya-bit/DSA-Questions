@@ -19,9 +19,18 @@
 #### Java
 
 ```java
-https://www.geeksforgeeks.org
+class Solution {
+    public int maxSubarraySum(int[] arr, int k) {
+       int res=-1,n=arr.length,l=0,s=0;
+        for(int r=0;r<n;r++){
+            s+=arr[r];
+            if(r-l+1>k) s-=arr[l++];
+            if(r-l+1==k) res=Math.max(res,s);
+        }
+        return res;
+    }
+}
 ```
-
 
 #### C++
 
