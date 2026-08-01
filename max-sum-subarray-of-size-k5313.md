@@ -26,7 +26,18 @@ https://www.geeksforgeeks.org
 #### C++
 
 ```cpp
-/* Code hidden */
+class Solution {
+  public:
+    int maxSubarraySum(vector<int>& arr, int k) {
+        int res=-1,n=arr.size(),l=0,s=0;
+        for(int r=0;r<n;r++){
+            s+=arr[r];
+            if(r-l+1>k) s-=arr[l++];
+            if(r-l+1==k) res=max(res,s);
+        }
+        return res;
+    }
+};
 ```
 
 <!-- tabs:end -->
