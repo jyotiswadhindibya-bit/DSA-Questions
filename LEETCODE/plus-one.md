@@ -84,6 +84,32 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    vector<int> plusOne(vector<int>& d) {
+          int n=d.size();
+        d[n-1]++;
+        for(int i=n-1;i>0;i--){
+            if(d[i]==10){
+                d[i]=0;
+                d[i-1]++;
+            }
+        }
+        if(d[0]==10){
+            vector<int> res (n+1);
+            res[0]=1;
+            res[1]=0;
+            for(int i=2;i<n+1;i++) res[i]=d[i-1];
+            return res;
+        }
+        return d;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
