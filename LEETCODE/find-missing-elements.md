@@ -89,6 +89,27 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    vector<int> findMissingElements(vector<int>& nums) {
+        int n=nums.size(),l=101,h=0;
+        for(int i=0;i<n;i++){
+            l=min(nums[i],l);
+            h=max(nums[i],h);
+        }
+        vector<int> cnt(h+1,0);
+        vector<int> res; 
+        for(int i=0;i<n;i++) cnt[nums[i]]++; 
+        for(int i=l;i<=h;i++) 
+        if(cnt[i]==0) res.push_back(i);
+        return res;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
