@@ -74,16 +74,16 @@
 class Solution {
     public List<Integer> findMissingElements(int[] nums) {
         int n=nums.length,l=101,h=0;
-        Set<Integer> s=new HashSet<>();
+     
         for(int i=0;i<n;i++){
             l=Math.min(nums[i],l);
             h=Math.max(nums[i],h);
-            s.add(nums[i]);
         }
+        int cnt[]=new int[h+1];
         List<Integer> res=new ArrayList<>(h-l+1); 
-        
+        for(int i=0;i<n;i++) cnt[nums[i]]++; 
         for(int i=l;i<=h;i++) 
-        if(!s.contains(i)) res.add(i);
+        if(cnt[i]==0) res.add(i);
         return res;
     }
 }
