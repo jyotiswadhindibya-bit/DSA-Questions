@@ -68,6 +68,25 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int smallestNumber(int n, int t) {
+        if(n%10==0) return n;
+        while(true){
+            int a=1;
+            if(n>9) a=n/10;
+            int b=n%10;
+            int p=a*b;
+            if(p%t==0) return n;
+            else n++;
+        }
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
