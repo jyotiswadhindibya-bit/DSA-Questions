@@ -76,6 +76,37 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int characterReplacement(string s, int k) {
+        int n=s.size();
+        int l=0,len=0,diff=0,res=0;
+        int f[26]={0};
+        for(int r=0;r<n;r++){
+            f[s[r]-65]++;
+            len=r-l+1;
+            int m=largest(f);
+            diff=len-m;
+            while(diff>k){
+                f[s[l++]-65]--;
+                m=largest(f);
+                diff=(r-l+1)-m;
+            }
+            res=max(r-l+1,res);
+        }
+        return res;
+    }
+    int largest(int f[]){
+        int m=0;
+        for(int i=0;i<26;i++) m=max(m,f[i]);
+        return m;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
