@@ -62,6 +62,25 @@ public:
 };
 ```
 
+
+#### Java
+
+```java
+class Solution {
+    public int longestOnes(int[] nums, int k) {
+        int f[]=new int[2];
+        int n=nums.length,l=0,res=0;
+        for(int r=0;r<n;r++){
+            f[nums[r]]++;
+            while(f[0]>k)
+            f[nums[l++]]--;
+            res=Math.max(res,r-l+1);
+        }
+        return res;
+    }
+}
+
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
