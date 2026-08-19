@@ -80,6 +80,25 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int maxSubarrayLength(vector<int>& nums, int k) {
+        int n=nums.size();
+        int l=0,res=0;
+        unordered_map<int,int> map;
+        for(int r=0;r<n;r++){
+            map[nums[r]]++;   
+            while(map[nums[r]]>k) map[nums[l++]]--;
+            res=max(res,r-l+1);
+        }
+        return res;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
