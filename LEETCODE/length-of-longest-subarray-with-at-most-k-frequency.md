@@ -77,11 +77,6 @@ class Solution {
         }
         return res;
     }
-    public int maximum(HashMap<Integer,Integer> m){
-        int mf=0;
-        for(Map.Entry<Integer,Integer> entry:m.entrySet()) mf=Math.max(mf,entry.getValue());
-        return mf;
-    }
 }
 ```
 
