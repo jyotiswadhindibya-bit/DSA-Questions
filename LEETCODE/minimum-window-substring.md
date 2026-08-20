@@ -90,6 +90,39 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    string minWindow(string s, string t) {
+        int sn=s.length(),tn=t.length();
+        int tf[128]={0};
+        int sf[128]={0};
+        for(int i=0;i<tn;i++) tf[t[i]]++;
+        int l=0,res=sn+1,resl=0;
+        for(int r=0;r<sn;r++){
+            sf[s[r]]++;
+            while(contains(tf,sf)){
+                if(res>r-l+1){
+                    res=r-l+1;
+                    resl=l;
+                }
+                sf[s[l++]]--;
+            }
+        }
+        if(res==sn+1) return "";
+        string result=s.substr(resl,res);
+        return result;
+    }
+    bool contains(int tf[],int sf[]){
+        for(int i=0;i<128;i++)
+        if(tf[i]!=0 && sf[i]<tf[i]) return false;
+        return true;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
