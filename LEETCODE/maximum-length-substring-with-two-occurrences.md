@@ -64,6 +64,24 @@ public:
 };
 ```
 
+
+#### Java
+
+```java
+class Solution {
+    public int maximumLengthSubstring(String s) {
+        int n=s.length();
+        int f[]=new int[26];
+        int l=0,res=0;
+        for(int r=0;r<n;r++){
+            f[s.charAt(r)-97]++;
+            while(f[s.charAt(r)-97]>2) f[s.charAt(l++)-97]--;
+            res=Math.max(res,r-l+1);
+        }
+        return res;
+    }
+}
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
