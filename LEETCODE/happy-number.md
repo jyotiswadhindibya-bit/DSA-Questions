@@ -81,6 +81,25 @@ public:
 };
 ```
 
+
+#### Java
+
+```java
+class Solution {
+    public boolean isHappy(int n) {
+        while(n>=10){
+            int dup=n,s=0,d;
+            while(dup>0){
+                d=dup%10;
+                s+=d*d;
+                dup/=10;
+            }
+            n=s;
+        }
+        return (n==1 || n==7)?true:false;
+    }
+}
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
