@@ -67,6 +67,25 @@ public:
 };
 ```
 
+
+#### Java
+
+```java
+class Solution {
+    public int maxProduct(int[] nums) {
+       int n=nums.length;
+        int maxbest=nums[0],minbest=nums[0],res=nums[0];
+        for(int i=1;i<n;i++){
+            int mini=minbest*nums[i];
+            int maxi=maxbest*nums[i];
+            minbest=Math.min(nums[i],Math.min(mini,maxi));
+            maxbest=Math.max(nums[i],Math.max(mini,maxi));
+            res=Math.max(res,Math.max(minbest,maxbest));
+        }
+        return res;
+    }
+}
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
