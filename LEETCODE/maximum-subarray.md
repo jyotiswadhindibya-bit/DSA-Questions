@@ -57,10 +57,6 @@
 
 ```java
 class Solution {
-     static {
-        for (int i = 0; i < 500; i++)
-            maxSubArray(new int[1]);
-    }
     public static int maxSubArray(int[] nums) {
         int n=nums.length;
         int best=nums[0],res=nums[0];
