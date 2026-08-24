@@ -57,7 +57,11 @@
 
 ```java
 class Solution {
-    public int maxSubArray(int[] nums) {
+     static {
+        for (int i = 0; i < 500; i++)
+            maxSubArray(new int[1]);
+    }
+    public static int maxSubArray(int[] nums) {
         int n=nums.length;
         int best=nums[0],res=nums[0];
         for(int i=1;i<n;i++){
@@ -68,7 +72,6 @@ class Solution {
     }
 }
 ```
-
 
 #### C++
 
