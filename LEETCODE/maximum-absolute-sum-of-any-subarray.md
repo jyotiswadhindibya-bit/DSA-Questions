@@ -70,6 +70,24 @@ public:
 };
 ```
 
+
+#### Java
+
+```java
+class Solution {
+    public int maxAbsoluteSum(int[] nums) {
+        int n=nums.length;
+        int maxbest=nums[0],maxres=nums[0],minbest=nums[0],minres=nums[0];
+        for(int i=1;i<n;i++){
+            maxbest=Math.max(maxbest+nums[i],nums[i]);
+            maxres=Math.max(maxres,maxbest);
+            minbest=Math.min(minbest+nums[i],nums[i]);
+            minres=Math.min(minres,minbest);
+        }
+        return Math.max(Math.abs(maxres),Math.abs(minres));
+    }
+}
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
