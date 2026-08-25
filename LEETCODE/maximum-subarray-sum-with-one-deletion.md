@@ -68,6 +68,24 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int maximumSum(vector<int>& a) {
+        int n=a.size();
+        int delbest=a[0],best=a[0],res=a[0];
+        for(int i=1;i<n;i++){
+            delbest=max(best,delbest+a[i]);
+            best=max(a[i],best+a[i]);
+            res=max(res,max(delbest,best));
+        }
+        return res;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
