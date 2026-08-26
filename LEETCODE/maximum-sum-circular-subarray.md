@@ -74,6 +74,26 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int maxSubarraySumCircular(vector<int>& nums) {
+        int n=nums.size(),s=nums[0],maxbest=nums[0],minbest=nums[0],minres=nums[0],maxres=nums[0];
+        for(int i=1;i<n;i++){
+            s+=nums[i];
+            minbest=min(minbest+nums[i],nums[i]);
+            minres=min(minres,minbest);
+            maxbest=max(maxbest+nums[i],nums[i]);
+            maxres=max(maxres,maxbest);
+        }
+        if(maxres<0) return maxres;
+        return max(maxres,s-minres);
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
