@@ -55,6 +55,26 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        int n=nums.size();
+        int s=0,res=0;
+        unordered_map<int,int> m;
+        m[0]=1;
+        for(int i=0;i<n;i++){
+            s+=nums[i];
+            res+=m[s-k];
+            m[s]++;
+        } 
+        return res;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
