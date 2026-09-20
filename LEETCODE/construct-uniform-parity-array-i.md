@@ -80,6 +80,17 @@ class Solution {
 }
 ```
 
+
+#### C++
+
+```cpp
+class Solution {
+public:
+    bool uniformArray(vector<int>& nums1) {
+        return 1;
+    }
+};
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
