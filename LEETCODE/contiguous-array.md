@@ -80,11 +80,12 @@ class Solution {
 public:
     int findMaxLength(vector<int>& nums) {
         int n=nums.size(),res=0;
-        int f[2]={0};
+        int z=0,o=0;
         unordered_map<int,int> m;
         for(int i=0;i<n;i++){
-            f[nums[i]]++;
-            int d=f[0]-f[1];
+            if(nums[i]) o++;
+            else z++;
+            int d=o-z;
             if(d==0) res=max(res,i+1);
             else{
             if(m.count(d)==0) m[d]=i;
@@ -95,6 +96,7 @@ public:
     }
 };
 ```
+
 <!-- tabs:end -->
 
 <!-- solution:end -->
