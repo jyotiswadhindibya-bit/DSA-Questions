@@ -73,6 +73,26 @@ public:
 };
 ```
 
+
+#### Java
+
+```java
+class Solution {
+    public int minOperations(int[] nums, int x) {
+        int k=-x,n=nums.length;
+        for(int i=0;i<n;i++) k+=nums[i];
+        if(k==0) return n;
+        if(k<0) return -1;
+        int l=0,s=0,res=-1;
+        for(int r=0;r<n;r++){
+            s+=nums[r];
+            while(s>k) s-=nums[l++];
+            if(s==k) res=Math.max(res,r-l+1);
+        }
+        return res==-1?-1:n-res;
+    }
+}
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
