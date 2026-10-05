@@ -58,7 +58,8 @@
 class Solution {
 public:
     int minOperations(vector<int>& nums, int x) {
-        int k=reduce(nums.begin(),nums.end())-x,n=nums.size();
+        int k=-x,n=nums.size();
+        for(int i=0;i<n;i++) k+=nums[i];
         if(k==0) return n;
         if(k<0) return -1;
         int l=0,s=0,res=-1;
