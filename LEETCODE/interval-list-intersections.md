@@ -84,6 +84,31 @@ public:
 };
 ```
 
+
+#### Java
+
+```java
+class Solution {
+    public int[][] intervalIntersection(int[][] fl, int[][] sl) {
+        int n=fl.length,m=sl.length;
+        ArrayList<int[]> res=new ArrayList<>();
+        int i=0,j=0;
+        while(i<n && j<m){
+            int s1=fl[i][0],e1=fl[i][1];
+            int s2=sl[j][0],e2=sl[j][1];
+            if(s2>=s1){
+                if(e1>=s2) res.add(new int[]{Math.max(s1,s2),Math.min(e1,e2)});
+            }
+            else{
+                if(e2>=s1) res.add(new int[]{Math.max(s1,s2),Math.min(e1,e2)});
+            }
+            if(e1>e2) j++;
+            else i++;
+        }
+    return res.toArray(new int[res.size()][]);
+    }
+}
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
