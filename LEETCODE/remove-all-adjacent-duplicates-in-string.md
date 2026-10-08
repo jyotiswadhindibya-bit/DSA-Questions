@@ -73,6 +73,28 @@ public:
 };
 ```
 
+
+#### Java
+
+```java
+class Solution {
+    public String removeDuplicates(String s) {
+        int n=s.length();
+        Stack<Character> st=new Stack<>();
+        st.push(s.charAt(0));
+        for(int i=1;i<n;i++){
+            if(!st.empty() && st.peek()==s.charAt(i)){
+                st.pop();
+                continue;
+            }
+            st.push(s.charAt(i));
+        }
+        char res[]=new char[st.size()];
+        for(int i=st.size()-1;i>=0;i--) res[i]=st.pop();
+        return new String(res);
+    }
+}
+```
 <!-- tabs:end -->
 
 <!-- solution:end -->
